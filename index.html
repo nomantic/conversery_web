@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversery - AI Language Learning</title>
+    <title>Conversery - AI Language Learning Reimagined</title> <!-- Slightly enhanced title -->
     <link rel="stylesheet" href="style.css">
     <!-- Link to Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Link to Google Fonts (Example: Poppins) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link to Google Fonts (Poppins) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!-- Added 500 weight -->
 </head>
 <body>
 
@@ -19,72 +19,77 @@
             <div class="logo">
                 <i class="fas fa-feather-alt logo-icon"></i> Conversery
             </div>
-            <!-- Future Nav Links Here -->
+            <!-- Future Navigation Links can go here -->
+            <!-- Example: <ul class="nav-links"><li><a href="#features">Features</a></li></ul> -->
         </nav>
     </header>
 
     <main>
         <section id="hero">
+            <div class="hero-overlay"></div> <!-- Added overlay for text contrast -->
             <div class="container hero-content">
-                <h1 class="animate-hero-h1">Learn Languages Naturally <br>with AI Stories & Conversations</h1>
-                <p class="animate-hero-p">Immerse yourself in interactive AI-generated narratives, dialogues, quizzes, and custom learning paths. Conversery makes language acquisition engaging, rewarding, and effective.</p>
-                <div class="cta-buttons animate-hero-p" style="animation-delay: 0.4s;"> <!-- Added delay -->
-                    <a href="https://play.google.com/store/apps/" target="_blank" class="store-button">
+                <h1 class="animate-hero-h1">Master Languages with <br>AI Stories & Conversations</h1> <!-- Refined Heading -->
+                <p class="animate-hero-p">Conversery uses cutting-edge AI to create immersive stories, interactive dialogues, and personalized lessons that make learning feel natural and fun.</p> <!-- Refined Paragraph -->
+                <div class="cta-buttons animate-hero-p" style="animation-delay: 0.4s;">
+                    <a href="https://play.google.com/store/apps/" target="_blank" rel="noopener noreferrer" class="store-button google-play"> <!-- Added specific class -->
                         <i class="fab fa-google-play"></i> Get on Google Play
                     </a>
-                    <a href="https://www.apple.com/app-store/" target="_blank" class="store-button">
+                    <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer" class="store-button app-store"> <!-- Added specific class -->
                         <i class="fab fa-apple"></i> Download on the App Store
                     </a>
                 </div>
-                <button class="webapp-button animate-hero-p" style="animation-delay: 0.6s;" disabled> <!-- Added delay -->
+                <button class="webapp-button animate-hero-p" style="animation-delay: 0.6s;" disabled>
                     Launch Webapp (Coming Soon) <i class="fas fa-rocket"></i>
                 </button>
             </div>
-            <!-- Optional: Add a subtle graphic element here -->
-            <!-- <img src="images/hero-graphic.svg" alt="" class="hero-graphic"> -->
+             <!-- Optional subtle graphic element -->
+             <!-- <div class="hero-graphic"></div> -->
         </section>
 
         <section id="features">
             <div class="container">
-                <h2>Unlock Your Language Potential</h2>
+                <h2>Everything You Need to Succeed</h2> <!-- More benefit-oriented heading -->
                 <div class="features-grid">
-                    <!-- Existing Features -->
+                    <!-- Feature Items -->
                     <div class="feature-item animate-feature">
-                        <i class="fas fa-robot"></i>
+                        <div class="feature-icon-wrapper"><i class="fas fa-robot"></i></div>
                         <h3>AI-Powered Stories</h3>
                         <p>Engage with unique stories generated by AI that adapt to your vocabulary and progress.</p>
                     </div>
                     <div class="feature-item animate-feature">
-                        <i class="fas fa-comments"></i>
+                         <div class="feature-icon-wrapper"><i class="fas fa-comments"></i></div>
                         <h3>Interactive Conversations</h3>
                         <p>Practice speaking and understanding through realistic AI-driven conversations on various topics.</p>
                     </div>
                     <div class="feature-item animate-feature">
-                        <i class="fas fa-brain"></i>
+                         <div class="feature-icon-wrapper"><i class="fas fa-brain"></i></div>
                         <h3>Contextual Learning</h3>
-                        <p>Acquire new words and grammar naturally within the context of stories and dialogues, just like real life.</p>
+                        <p>Acquire new words and grammar naturally within the context of stories and dialogues.</p>
                     </div>
-
-                    <!-- New Features -->
                     <div class="feature-item animate-feature">
-                        <i class="fas fa-tasks"></i> {/* Changed from question-circle for better visual */}
+                         <div class="feature-icon-wrapper"><i class="fas fa-tasks"></i></div>
                         <h3>Engaging Quiz Lessons</h3>
                         <p>Test your understanding and reinforce learning with interactive quizzes integrated into lessons.</p>
                     </div>
                     <div class="feature-item animate-feature">
-                        <i class="fas fa-map-signs"></i> {/* Represents custom paths */}
+                         <div class="feature-icon-wrapper"><i class="fas fa-map-signs"></i></div>
                         <h3>Custom Learning Paths</h3>
                         <p>Tailor your learning journey based on your goals, interests, and current proficiency level.</p>
                     </div>
                     <div class="feature-item animate-feature">
-                        <i class="fas fa-star"></i> {/* Changed from trophy for simplicity */}
+                         <div class="feature-icon-wrapper"><i class="fas fa-star"></i></div>
                         <h3>Motivational Rewards</h3>
-                        <p>Earn points, badges, and unlock achievements as you reach milestones in your language learning.</p>
+                        <p>Earn points, badges, and unlock achievements as you reach milestones in your learning.</p>
                     </div>
                      <div class="feature-item animate-feature">
-                        <i class="fas fa-fire"></i>
+                         <div class="feature-icon-wrapper"><i class="fas fa-fire"></i></div>
                         <h3>Build Your Streak</h3>
                         <p>Stay motivated by maintaining daily learning streaks and watch your consistency pay off.</p>
+                    </div>
+                     <div class="feature-item animate-feature"> <!-- Example of adding another feature -->
+                         <div class="feature-icon-wrapper"><i class="fas fa-chart-line"></i></div>
+                        <h3>Track Your Progress</h3>
+                        <p>Visualize your improvement with detailed statistics and progress reports over time.</p>
                     </div>
 
                 </div>
@@ -95,8 +100,13 @@
 
     <footer>
         <div class="container">
-            <p>© 2023 Conversery. All rights reserved.</p>
+            <p>© 2023 Conversery. AI Language Learning Made Simple.</p>
             <!-- Add social media links if desired -->
+            <!-- <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div> -->
         </div>
     </footer>
 

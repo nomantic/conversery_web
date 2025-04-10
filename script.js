@@ -8,16 +8,18 @@ const featuresToAnimate = document.querySelectorAll('.animate-feature');
 const observerOptions = {
     root: null, // Use the viewport as the root
     rootMargin: '0px',
-    threshold: 0.2 // Trigger when 20% of the element is visible
+    threshold: 0.15 // Trigger when 15% of the element is visible (adjust if needed)
 };
 
 const observerCallback = (entries, observer) => {
-    entries.forEach(entry => {
+    entries.forEach((entry, index) => {
         // If the element is intersecting (visible)
         if (entry.isIntersecting) {
+            // Add a staggered delay based on the element's index (optional but nice)
+            entry.target.style.transitionDelay = `${index * 0.05}s`; // e.g., 0s, 0.05s, 0.1s...
             entry.target.classList.add('visible');
             // Optional: Stop observing the element once it's visible
-            // observer.unobserve(entry.target);
+            observer.unobserve(entry.target);
         }
         // Optional: If you want the animation to reverse when scrolling up
         // else {
