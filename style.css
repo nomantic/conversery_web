@@ -376,7 +376,7 @@ footer {
 }
 
 footer p {
-    margin-bottom: 1rem; /* Space below copyright */
+    margin-bottom: 0; /* Remove margin as it's handled by footer-links */
 }
 
 .social-links a {
@@ -486,4 +486,79 @@ footer p {
      .feature-item h3 { font-size: 1.4rem; }
      .feature-item p { font-size: 0.95rem; }
      footer { padding: 2rem 0; margin-top: 3rem; }
+}
+
+
+/* --- NEW STYLES ADDED BELOW --- */
+
+/* --- Text Page Styles (Privacy, Terms, etc.) --- */
+#text-page {
+    padding: 5rem 0;
+}
+
+.text-content-wrapper {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 3rem 4rem;
+    border-radius: 16px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.text-content-wrapper h1 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.text-content-wrapper h2 {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.text-content-wrapper p, .text-content-wrapper li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* --- Footer Link Styles --- */
+.footer-links {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-links span {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive adjustment for text pages */
+@media (max-width: 768px) {
+    .text-content-wrapper {
+        padding: 2rem 1.5rem;
+    }
+    .text-content-wrapper h1 {
+        font-size: 2.2rem;
+    }
+    .text-content-wrapper h2 {
+        font-size: 1.5rem;
+    }
 }
