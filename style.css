@@ -73,7 +73,7 @@ img {
     max-width: 100%;
 }
 
-/* --- Header & Dynamic Scroll Styles --- */
+/* === HOMEPAGE DYNAMIC HEADER === */
 header {
     padding: 1rem 0;
     position: fixed;
@@ -95,6 +95,22 @@ header.header-scrolled {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+}
+
+/* === STATIC PAGE HEADER OVERRIDE STYLES === */
+.static-page header {
+    position: sticky;
+    /* The classic "sticky" header */
+    transform: translateY(0);
+    /* Ensure it's not hidden */
+    opacity: 1;
+    /* Ensure it's visible */
+    pointer-events: auto;
+    /* Ensure it's clickable */
+    background: rgba(0, 0, 0, 0.2);
+    /* Revert to the old transparent background */
+    box-shadow: none;
+    /* No shadow needed for this style */
 }
 
 header nav {
@@ -122,7 +138,7 @@ header nav {
     margin-right: 0.8rem;
 }
 
-/* --- Hero Section & Logo Styles --- */
+/* === Hero Section & Logo Styles === */
 #hero {
     min-height: 100vh;
     display: flex;
@@ -193,7 +209,7 @@ header nav {
     color: rgba(255, 255, 255, 1);
 }
 
-/* --- Hero Animations --- */
+/* Hero Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -226,7 +242,7 @@ header nav {
     opacity: 0;
 }
 
-/* --- Call to Action Buttons --- */
+/* Call to Action Buttons */
 .cta-buttons {
     display: flex;
     justify-content: center;
@@ -290,7 +306,7 @@ header nav {
     pointer-events: none;
 }
 
-/* --- Features Section --- */
+/* Features Section */
 #features {
     padding: 7rem 0;
     background-color: rgba(0, 0, 0, 0.15);
@@ -414,15 +430,13 @@ header nav {
     line-height: 1.6;
 }
 
-/* --- Footer --- */
+/* Footer */
 footer {
     text-align: center;
     padding: 3rem 0;
-    /* === MODIFICATION: Removed margin-top to create a seamless transition === */
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.8);
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    /* Let the footer share the same background as the features section for consistency */
     background: rgba(0, 0, 0, 0.15);
 }
 
@@ -430,7 +444,72 @@ footer p {
     margin-bottom: 0;
 }
 
-/* --- Responsiveness & Text Page Styles --- */
+/* Text Page Styles */
+#text-page {
+    padding: 5rem 0;
+}
+
+/* Content spacing override for static pages */
+.static-page #text-page {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.text-content-wrapper {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 3rem 4rem;
+    border-radius: 16px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.text-content-wrapper h1 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.text-content-wrapper h2 {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.text-content-wrapper p,
+.text-content-wrapper li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.footer-links {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-links span {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsiveness */
 @media (max-width: 1200px) {
     .container {
         max-width: 960px;
@@ -514,6 +593,18 @@ footer p {
     .feature-item {
         padding: 2rem 1.5rem;
     }
+
+    .text-content-wrapper {
+        padding: 2rem 1.5rem;
+    }
+
+    .text-content-wrapper h1 {
+        font-size: 2.2rem;
+    }
+
+    .text-content-wrapper h2 {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 576px) {
@@ -591,77 +682,5 @@ footer p {
 
     footer {
         padding: 2rem 0;
-    }
-}
-
-#text-page {
-    padding: 5rem 0;
-}
-
-.text-content-wrapper {
-    background: rgba(0, 0, 0, 0.25);
-    padding: 3rem 4rem;
-    border-radius: 16px;
-    backdrop-filter: blur(15px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.text-content-wrapper h1 {
-    font-size: 2.8rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.text-content-wrapper h2 {
-    font-size: 1.8rem;
-    margin-top: 2.5rem;
-    margin-bottom: 1.2rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.text-content-wrapper p,
-.text-content-wrapper li {
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-.footer-links {
-    margin-bottom: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-.footer-links a {
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.footer-links span {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-@media (max-width: 768px) {
-    .text-content-wrapper {
-        padding: 2rem 1.5rem;
-    }
-
-    .text-content-wrapper h1 {
-        font-size: 2.2rem;
-    }
-
-    .text-content-wrapper h2 {
-        font-size: 1.5rem;
     }
 }
