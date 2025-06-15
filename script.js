@@ -2,11 +2,11 @@ console.log("Conversery Website Loaded!");
 
 // --- Intersection Observer for Feature Animations ---
 const featuresToAnimate = document.querySelectorAll('.animate-feature');
-if (featuresToAnimate.length > 0) {
+if (featuresToAnimate) {
     const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                // The delay is now handled by the main animation property, but this is fine to keep.
+                entry.target.style.transitionDelay = `${index * 0.05}s`;
                 entry.target.classList.add('visible');
                 observer.unobserve(entry.target);
             }
@@ -18,17 +18,20 @@ if (featuresToAnimate.length > 0) {
     });
 }
 
-// --- Dynamic Header and Logo Animation on Scroll ---
+// --- Dynamic Header and Logo on Scroll ---
 const header = document.querySelector('header');
+const heroLogo = document.querySelector('.hero-logo');
 
-// Check if the header element exists before adding the listener
-if (header) {
+// Check if both elements exist before adding the listener (this prevents errors on static pages)
+if (header && heroLogo) {
     window.addEventListener('scroll', () => {
-        // Use a small scroll threshold to trigger the animation
-        if (window.scrollY > 50) {
+        // Use a threshold (e.g., 100px) to trigger the change
+        if (window.scrollY > 100) {
             header.classList.add('header-scrolled');
+            heroLogo.classList.add('hero-logo-hidden');
         } else {
             header.classList.remove('header-scrolled');
+            heroLogo.classList.remove('hero-logo-hidden');
         }
     });
 }
