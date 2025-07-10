@@ -12,7 +12,7 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 </head>
@@ -33,25 +33,93 @@
             <div class="container">
                 <div class="text-content-wrapper">
                     <h1>Privacy Policy</h1>
-                    <p><strong>Last Updated: [Date]</strong></p>
-                    <p>Welcome to Conversery. We are committed to protecting your privacy. This Privacy Policy explains
-                        how we collect, use, disclose, and safeguard your information when you use our application.</p>
-                    <h2>1. Information We Collect</h2>
-                    <p>We may collect information about you in a variety of ways. The information we may collect on the
-                        Service includes: [List the types of data you collect, e.g., personal data like name/email,
-                        derivative data like IP address, mobile device data, etc.]</p>
-                    <h2>2. How We Use Your Information</h2>
-                    <p>Having accurate information about you permits us to provide you with a smooth, efficient, and
-                        customized experience. Specifically, we may use information collected about you via the Service
-                        to: [List how you use the data, e.g., create and manage your account, personalize your
-                        experience, send you push notifications, etc.]</p>
-                    <h2>3. Disclosure of Your Information</h2>
-                    <p>We may share information we have collected about you in certain situations. Your information may
-                        be disclosed as follows: [Explain when and why you might share data, e.g., with third-party
-                        service providers, for legal reasons, etc.]</p>
-                    <h2>Contact Us</h2>
-                    <p>If you have questions or comments about this Privacy Policy, please contact us at: [Your Contact
-                        Email]</p>
+                    <p><strong>Effective Date: July 10, 2025</strong></p>
+                    
+                    <h2>1. Introduction</h2>
+                    <p>Welcome to Conversery! This Privacy Policy explains how we collect, use, and protect your information when you use our language learning mobile application (the "App"). Your privacy is important to us, and we are committed to being transparent about our data practices.</p>
+                    <p>By using our App, you agree to the collection and use of information in accordance with this policy.</p>
+                    
+                    <h2>2. Information We Collect</h2>
+                    <p>We collect several types of information to provide and improve our service to you.</p>
+                    
+                    <h3>A. Information You Provide Directly to Us:</h3>
+                    <ul>
+                        <li><strong>Account Information:</strong> When you create an account, we collect information depending on your sign-up method:
+                            <ul>
+                                <li><strong>Email & Password:</strong> We collect your email address.</li>
+                                <li><strong>Google Sign-In:</strong> We collect your name and email address as provided by your Google account.</li>
+                                <li><strong>Anonymous Authentication:</strong> No personally identifiable information is collected, but a unique user ID is generated to save your progress.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Profile Information:</strong> You may voluntarily provide a display name. This is not mandatory.</li>
+                        <li><strong>User Input for AI Features:</strong> We collect the text prompts you enter to generate content and images using our AI features.</li>
+                    </ul>
+
+                    <h3>B. Information Generated During Your Use of the App:</h3>
+                    <ul>
+                        <li><strong>Learning Data:</strong> We store your language preferences, learning material, progress, and rewards earned within the App to provide a persistent and personalized experience. This data is stored in our Cloud Firestore database.</li>
+                        <li><strong>Media Files:</strong>
+                            <ul>
+                                <li><strong>AI-Generated Images:</strong> Images created by our AI image generation feature are stored in Firebase Cloud Storage and linked to your account.</li>
+                                <li><strong>Text-to-Speech Audio:</strong> Audio files generated from text ("Text-to-Speech") are stored in Firebase Cloud Storage so you can access them again.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>C. Information We Collect Automatically:</h3>
+                    <ul>
+                        <li><strong>Usage and Device Information:</strong> We use Google Analytics for Firebase to automatically collect information about your device and how you interact with our App. This includes:
+                            <ul>
+                                <li>Device type, operating system, and IP address.</li>
+                                <li>In-app events, such as features used and time spent on screens.</li>
+                                <li>Crash reports to help us identify and fix bugs.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <h2>3. How We Use Your Information</h2>
+                    <p>We use the information we collect for the following purposes:</p>
+                    <ul>
+                        <li><strong>To Provide and Maintain Our Service:</strong> To create your account, save your learning progress, and allow you to access your data across sessions.</li>
+                        <li><strong>To Provide AI-Powered Features:</strong>
+                            <ul>
+                                <li>To process your text inputs and generate relevant learning content.</li>
+                                <li>To send your text prompts to our AI image generation partner to create images for you.</li>
+                                <li>To generate audio files from text for listening practice.</li>
+                            </ul>
+                        </li>
+                        <li><strong>To Personalize Your Experience:</strong> To tailor content and features to your language preferences and learning level.</li>
+                        <li><strong>To Improve Our App:</strong> To understand how users interact with our App, to fix bugs, and to develop new features using aggregated and anonymized analytics data.</li>
+                        <li><strong>To Ensure Security:</strong> To monitor for and prevent fraudulent or unauthorized activity.</li>
+                    </ul>
+                    
+                    <h2>4. How and Why We Share Your Information (Third-Party Services)</h2>
+                    <p>We do not sell your personal data. However, we share information with the following third-party service providers who help us operate our App:</p>
+                    <ul>
+                        <li><strong>Google (Firebase):</strong> We use Google's Firebase platform as our core infrastructure. This includes Firebase Authentication, Cloud Firestore (database), Cloud Storage, and Google Analytics. All of your data mentioned in this policy is stored and processed on the Firebase platform. You can learn more by reviewing <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.</li>
+                        <li><strong>Runware (for AI Image Generation):</strong> Our AI image generation feature is powered by Runware. When you provide a text prompt to create an image, we send this prompt to Runware's service for processing. This feature includes a sensitive content filter. We encourage you to review <a href="https://runware.ai/privacy" target="_blank" rel="noopener noreferrer">Runware's Privacy Policy</a> to understand how they handle your data.</li>
+                        <li><strong>Text-to-Speech Provider:</strong> To convert text to speech, we may use a third-party service provider. The text you select is sent to this provider solely to generate the audio file.</li>
+                    </ul>
+                    
+                    <h2>5. Data Retention and Your Choices</h2>
+                    <p>We store your data as long as your account is active. You are in control of your data.</p>
+                    <ul>
+                        <li><strong>Account Deletion:</strong> You have the right to delete your account at any time. Deleting your account will automatically and permanently delete all of your associated personal data from our Cloud Firestore database and all of your media files from Cloud Storage.</li>
+                        <li><strong>How to Delete:</strong> You can delete your account from within the App's settings or by sending a deletion request to our support team at <a href="mailto:support@conversery.com">support@conversery.com</a>.</li>
+                    </ul>
+                    <p>You also have the right to access or correct your personal information. Please contact us at the email above for such requests.</p>
+                    
+                    <h2>6. Data Security</h2>
+                    <p>We are committed to protecting your data. We rely on the robust security measures of Google's Firebase platform, which includes data encryption in transit and at rest. While we take significant measures to safeguard your information, please be aware that no method of transmission over the Internet or method of electronic storage is 100% secure.</p>
+                    
+                    <h2>7. Children's Privacy</h2>
+                    <p>Our App is not intended for use by children under the age of 13 (or 16 in the European Union). We do not knowingly collect personally identifiable information from children under this age. If we become aware that we have collected personal data from a child without verification of parental consent, we will take steps to remove that information from our servers.</p>
+                    
+                    <h2>8. Changes to This Privacy Policy</h2>
+                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Effective Date" at the top. You are advised to review this Privacy Policy periodically for any changes.</p>
+
+                    <h2>9. Contact Us</h2>
+                    <p>If you have any questions or concerns about this Privacy Policy or your data, please contact us at: <a href="mailto:support@conversery.com">support@conversery.com</a></p>
                 </div>
             </div>
         </section>
